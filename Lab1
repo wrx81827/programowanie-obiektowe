@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package aaa;
+
+/**
+ *
+ * @author vdi-terminal
+ */
+
+   
+
+public class Aaa {
+
+    public static void main(String[] args) {
+        int numer = 10;
+        int nienumer = 0;
+
+        try {
+            if (nienumer == 0) {
+                throw new MojWyjatek();
+            }
+
+            int result = numer / nienumer;
+            System.out.println("Wynik" + result);
+        } catch (MojWyjatek ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+class MojWyjatek extends Exception {
+
+            public MojWyjatek() {
+                super("Dzielenie przez zero nie dozwolone");
+            }
+        }
