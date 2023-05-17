@@ -1,0 +1,74 @@
+Zad1. /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package klasa.zwierzęta;
+
+/**
+ *
+ * @author vdi-terminal
+ */
+class Animal {
+
+    final string name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void sound() {
+    }
+}
+
+class Dog extends Animal {
+
+    public Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    public void sound() {
+        System.out.println(name + ":Hau Hau!");
+    }
+}
+
+class Cat extends Animal {
+
+    public Cat(String name) {
+        super(name);
+    }
+
+    @Override
+    public void sound() {
+        System.out.println(name + ":Miau Miau!");
+    }
+}
+
+class Cow extends Animal {
+
+    public Cow(String name) {
+        super(name);
+    }
+
+    @Override
+    public void sound() {
+        System.out.println(name + ":Moo Moo!");
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Dog dog = new Dog("Dog");
+        Cat cat = new Cat("Cat");
+        Cow cow = new Cow("Cow");
+
+        dog.sound();
+        cat.sound();
+        cow.sound();
+
+    }
+
+}
